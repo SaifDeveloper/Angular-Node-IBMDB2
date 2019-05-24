@@ -59,7 +59,8 @@ export class AddUserComponent implements OnInit {
   onCreateUser(){
     console.log("user:",JSON.stringify(this.user));  
     try{
-      this.http.post('/api', JSON.stringify(this.user), this.httpOptions)
+      // this.http.post('/api', JSON.stringify(this.user), this.httpOptions)
+      this.http.post('http://localhost:3000/signup', JSON.stringify(this.user), this.httpOptions)
         .subscribe(data=>{
           console.log(data);
           alert("saved!")
