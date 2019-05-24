@@ -1,0 +1,50 @@
+<form class="form" (ngSubmit)="onCreateUser($event)" #addUserForm="ngForm" >
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group mandatory">
+        <label>Username</label>
+        <input 
+          pattern="[a-zA-Z]*"
+          [(ngModel)] ="user.Username"
+          id="Username" 
+          class="form-control"
+          type="text"                   
+          name="Username"
+          required
+          maxlength="30">
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-group mandatory">
+        <label>Address</label>
+            <input
+            pattern="[a-zA-Z]*"
+            [(ngModel)]="user.Address"  
+            id="Address" 
+            class="form-control" 
+            type="text" 
+            name="Address"
+            maxlength="30"> 
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group mandatory">
+        <label>Phone_No</label>
+            <input
+            pattern="[a-zA-Z]*"
+            [(ngModel)]="user.Phone_No"  
+            id="Phone_No" 
+            class="form-control" 
+            type="text" 
+            name="Phone_No"
+            maxlength="30"> 
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button type="submit">Submit</button>
+      <!-- <button type="submit" class="btn btn-primary" (click)="callTheAPI(Username,Address,Phone_No)"> Submit </button>   -->
+        
+      </div>
+    </div>  
+  </form>
